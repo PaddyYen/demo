@@ -1,0 +1,17 @@
+<button class="btn btn-default" (click)="showMenu()">Demo</button>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let menu of menus">
+      <td>{{menu.name}}</td>
+      <td>{{menu.url}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
