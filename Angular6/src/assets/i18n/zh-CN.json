@@ -1,0 +1,55 @@
+{
+    "toast":{
+        "importDepartment":"请先选择一个部门!",
+        "deleteTab":"已有子选单，不可删除。",
+        "inputQuartzParameter":"请输入同步频率之参数",
+        "deleteSuccess":"刪除成功!",
+        "addSuccess":"新增成功",
+        "updateSuccess":"修改成功"
+    },
+    "public": {
+        "number": "编号",
+        "delete": "刪除",
+        "add": "新增",
+        "update": "修改",
+        "close": "关闭",
+        "store": "储存",
+        "success":"建立成功!"
+    },
+    "tabs": {
+        "lists": "主选单列表",
+        "name": "名称",
+        "url": "网址",
+        "edit": "编辑",
+        "addSub": "新增子选单",
+        "queues": "顺序",
+        "addMain": "新增主选单",
+        "updateMain": "修改主选单",
+        "type": "选单类型"
+    },
+    "organization": {
+        "tree": "组织树",
+        "people": "人员",
+        "name": "姓名",
+        "phone": "手机",
+        "jobTitle": "职务",
+        "email": "信箱",
+        "import": "汇入",
+        "change": "組織異動",
+        "Synchronize":"组织同步",
+        "now":"立即同步",
+        "SynchronizeFrequency":"设定同步频率"
+    },
+    "room":{
+        "create":"建立聊天室"
+    },
+    "access":{
+        "name":"姓名",
+        "matrixaccount":"matrix 帐号",
+        "changePassword":"变更密码",
+        "disabled":"停用帐号",
+        "disabledAccountSuccess":"停用帐号成功",
+        "passwordChangeSuccess":"密码变更成功",
+        "passwordNotSame":"新密码须相同"
+    }
+}

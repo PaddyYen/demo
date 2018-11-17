@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<form #changePasswodForm="ngForm">
+    <mat-dialog-content  novalidate>
+        <!-- <mat-form-field class="input-full-width"> 
+            <input type="password" matInput [(ngModel)]="changePasswordData.oldPassword" placeholder="舊密碼" name="oldPassword" required>
+        </mat-form-field> -->
+        <mat-form-field class="input-full-width">
+            <input type="password" matInput [(ngModel)]="changePasswordData.newPassword" placeholder="新密碼" name="newPassword" required>
+        </mat-form-field>
+        <mat-form-field class="input-full-width">
+            <input type="password" matInput [(ngModel)]="changePasswordData.newConfirmPassword" placeholder="確認新密碼" name="newConfirmPassword" required>
+        </mat-form-field>
+    </mat-dialog-content>
+</form>
+<mat-dialog-actions class="pull-right">
+    <button class="btn btn-primary" (click)="changePassword()" type="submit" [disabled]="!changePasswodForm.form.valid"><i class="fa fa-save">&nbsp;&nbsp;<span [translate]="'public.store'"></span></i></button>&nbsp;
+    <button class="btn btn-default" (click)="close()"><i class="fa fa-times">&nbsp;&nbsp;<span [translate]="'public.close'"></span></i></button>
+</mat-dialog-actions>

@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>{{title}}</h2>
+
+  <mat-dialog-content [formGroup]="mainCron">
+    <mat-radio-group formControlName="cronRadio" labelPosition="before">
+        <mat-radio-button [value]="1" labelPosition="after" (change)="disableInput(mainCron.get('cronExpression').enabled)"><span [translate]="'organization.now'"></span></mat-radio-button><br>
+        <mat-radio-button [value]="2" labelPosition="after" (change)="enableInput(mainCron.get('cronExpression').enabled)"><span [translate]="'organization.SynchronizeFrequency'"></span></mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field class="input-full-width">
+      <input matInput placeholder="參數" formControlName="cronExpression">
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="pull-right">
+    <button class="btn btn-primary" (click)="addDepartmentJob()"><i class="fa fa-save">&nbsp;&nbsp;<span [translate]="'public.store'"></span></i></button>&nbsp;
+    <button class="btn btn-default" (click)="close()"><i class="fa fa-times">&nbsp;&nbsp;<span [translate]="'public.close'"></span></i></button>
+  </mat-dialog-actions>

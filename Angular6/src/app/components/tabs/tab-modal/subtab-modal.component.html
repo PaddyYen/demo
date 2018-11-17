@@ -1,0 +1,45 @@
+<h2 mat-dialog-title>{{title}}</h2>
+
+<div class="hr-line-dashed"></div>  
+
+<mat-dialog-content [formGroup]="tabForm" novalidate>
+  <div formArrayName="subTabFormList" *ngFor="let tab of tabForm.controls.subTabFormList.controls; let i = index;">
+    <div class="row" style="margin-top: 15px;">
+      <div class="col-md-1"></div>
+      <div class="col-md-8" formGroupName="{{i}}">
+        <div>
+          <mat-form-field class="input-full-width">
+            <input matInput [(ngModel)]="tab.get('name').value" value="{{tab.get('name').value}}" placeholder="名稱" formControlName="name">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="input-full-width">
+            <input matInput [(ngModel)]="tab.get('url').value" value="{{tab.get('url').value}}" placeholder="網址" formControlName="url">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="col-md-6" style="margin-top: 22px;" *ngIf="tabForm.controls.subTabFormList.controls.length > 0">
+            <a class="waves-effect waves-light btn-small" (click)="moveSubTabUp(i, tabForm.controls.subTabFormList.controls)">
+              <i class="material-icons prefix" style="margin-top: -4px;">arrow_drop_up</i>
+            </a>
+            <br>
+            <a class="waves-effect waves-light btn-small" (click)="moveSubTabDown(i, tabForm.controls.subTabFormList.controls)">
+              <i class="material-icons prefix" style="margin-top: -15px;">arrow_drop_down</i>
+            </a>
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-danger form-control" *ngIf="tabForm.controls.subTabFormList.controls.length >= 1" (click)="deleteSubTab(i, tab)" style="width:auto;margin-top:23px;">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+<button class="btn btn-success" (click)="addSubTabPanel()"><i class="fa fa-plus">&nbsp;&nbsp;<span [translate]="'tabs.addSub'"></span></i></button>
+<div class="hr-line-foot-dashed"></div>  
+<mat-dialog-actions class="pull-right">
+  <button class="btn btn-primary" (click)="updateSubTabPanel()"><i class="fa fa-save">&nbsp;&nbsp;<span [translate]="'public.store'"></span></i></button>&nbsp;
+  <button class="btn btn-default" (click)="close()"><i class="fa fa-times">&nbsp;&nbsp;<span [translate]="'public.close'"></span></i></button>
+</mat-dialog-actions>

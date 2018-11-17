@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<mat-dialog-content [formGroup]="tabForm">
+    <div>
+        <mat-form-field class="input-full-width">
+            <input matInput [(ngModel)]="tab.name" placeholder="名稱" formControlName="name">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="input-full-width">
+            <input matInput [(ngModel)]="tab.url" placeholder="網址" formControlName="url">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="input-full-width">
+            <mat-select [(ngModel)]="tab.tabType" placeholder="選單類別" formControlName="tabType">
+                <mat-option *ngFor="let tabType of tabTypeList" [(value)]="tabType.id" >{{tabType.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions class="pull-right">
+    <button class="btn btn-primary" (click)="save()"><i class="fa fa-save">&nbsp;&nbsp;<span [translate]="'public.store'"></span></i></button>&nbsp;
+    <button class="btn btn-default" (click)="close()"><i class="fa fa-times">&nbsp;&nbsp;<span [translate]="'public.close'"></span></i></button>
+</mat-dialog-actions>
+

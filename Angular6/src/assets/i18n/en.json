@@ -1,0 +1,55 @@
+{
+    "toast":{
+        "importDepartment":"Please select a department first!",
+        "deleteTab":"There are already submenus and cannot be deleted.",
+        "inputQuartzParameter": "Please enter the parameters of the synchronization frequency",
+        "deleteSuccess":"Delete successfully!",
+        "addSuccess":"Add successfully!",
+        "updateSuccess":"Update successfully!"
+    },
+    "public": {
+        "number": "number",
+        "delete": "delete",
+        "add": "add",
+        "update": "update",
+        "close": "close",
+        "store": "store",
+        "success":"success!"
+    },
+    "tabs": {
+        "lists": "Lists",
+        "name": "Name",
+        "url": "Url",
+        "edit": "Edit",
+        "addSub": "Add Sub Tabs",
+        "updateMain": "Update Sub Tabs",
+        "queues": "Queues",
+        "addMain": "Add Main Tabs",
+        "type": "type"
+    },
+    "organization": {
+        "tree": "Organization Tree",
+        "people": "people",
+        "name": "name",
+        "phone": "mobile phone",
+        "jobTitle": "position",
+        "email": "email",
+        "import": "import",
+        "change": "Organizational Change",
+        "Synchronize":"Synchronized Organization",
+        "now":"Synchronize immediately",
+        "SynchronizeFrequency":"Set up synchronized frequency"
+    },
+    "room":{
+        "create":"Create room"
+    },
+    "access":{
+        "name":"name",
+        "matrixaccount":"matrix account",
+        "changePassword":"Change password",
+        "disabled":"Disable account",
+        "disabledAccountSuccess":"Disable account successfully.",
+        "passwordChangeSuccess":"Password changed successfully.",
+        "passwordNotSame":"New password must be same."
+    }
+}
