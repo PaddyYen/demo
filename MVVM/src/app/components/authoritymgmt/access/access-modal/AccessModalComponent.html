@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<form [formGroup]="changePasswodForm" (ngSubmit)="onSubmit()">
+    <mat-dialog-content novalidate>
+        <mat-form-field class="input-full-width">
+            <input type="password" matInput placeholder="{{ 'access.newPassword' | translate}}" formControlName="newPassword">
+        </mat-form-field>
+        <ng-container *ngIf="newPassword.invalid && (confirmedPassword.dirty || confirmedPassword.touched)">
+            <mat-error [translate]="'access.enterPw'"></mat-error>
+        </ng-container>
+        <div id="border"></div>
+        <mat-form-field class="input-full-width">
+            <input type="password" matInput placeholder="{{ 'access.confirmPassword' | translate}}" formControlName="confirmedPassword">
+        </mat-form-field>
+        <ng-container *ngIf="confirmedPassword.invalid && (confirmedPassword.dirty || confirmedPassword.touched)">
+            <mat-error *ngIf="confirmedPassword.errors['required']" [translate]="'access.enterConfirmPw'"></mat-error>
+            <mat-error *ngIf="confirmedPassword.errors['compare']" [translate]="'access.pwNotSame'"></mat-error>
+        </ng-container>
+    </mat-dialog-content>
+    <mat-dialog-actions class="pull-right">
+        <button class="btn btn-primary" type="submit" [disabled]="!changePasswodForm.valid"><i class="fa fa-save">&nbsp;&nbsp;<span
+                    [translate]="'public.store'"></span></i></button>&nbsp;
+        <button class="btn btn-default" type="button" (click)="close()"><i class="fa fa-times">&nbsp;&nbsp;<span
+                    [translate]="'public.close'"></span></i></button>
+    </mat-dialog-actions>
+</form>

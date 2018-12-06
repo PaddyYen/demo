@@ -1,0 +1,83 @@
+{
+    "toast": {
+        "importDepartment": "Please select a department first!",
+        "deleteTab": "There are already submenus and cannot be deleted.",
+        "inputQuartzParameter": "Please enter the parameters of the synchronization frequency",
+        "deleteSuccess": "Delete successfully!",
+        "addSuccess": "Add successfully!",
+        "updateSuccess": "Update successfully!",
+        "inputDataError": "Please enter the correct data."
+    },
+    "public": {
+        "number": "number",
+        "delete": "delete",
+        "add": "add",
+        "update": "update",
+        "close": "close",
+        "store": "store",
+        "success": "success!"
+    },
+    "tabs": {
+        "access": {
+            "title":"Authority Management",
+            "org":"Organization Management",
+            "account":"Account Management",
+            "group":"Group Management"
+        },
+        "apps":{
+            "title":"Enterprise Application",
+            "appList":"Application List"
+        },
+        "message":{
+            "title":"Message Management",
+            "robot":"Custom Commands"
+        },
+        "entsetting":{
+            "title":"Enterprise Setting",
+            "afsetting":"Agentflow Setting"
+        }
+    },
+    "apps": {
+        "lists": "Lists",
+        "name": "Name",
+        "url": "Url",
+        "edit": "Edit",
+        "addSub": "Add Sub Apps",
+        "updateMain": "Update Sub Apps",
+        "queues": "Queues",
+        "addMain": "Add Main Apps",
+        "type": "type"
+    },
+    "organization": {
+        "tree": "Organization Tree",
+        "people": "people",
+        "name": "name",
+        "phone": "mobile phone",
+        "jobTitle": "position",
+        "email": "email",
+        "import": "import",
+        "change": "Organizational Change",
+        "Synchronize": "Synchronized Organization",
+        "now": "Synchronize immediately",
+        "SynchronizeFrequency": "Set up synchronized frequency",
+        "setting":"Setting",
+        "parameter":"Parameter"
+    },
+    "room": {
+        "create": "Create room"
+    },
+    "access": {
+        "name": "name",
+        "matrixaccount": "matrix account",
+        "changePassword": "Change password",
+        "disabled": "Disable account",
+        "disabledAccountSuccess": "Disable account successfully.",
+        "passwordChangeSuccess": "Password changed successfully.",
+        "passwordNotSame": "New password must be same.",
+        "enterPw": "Please enter a new password!",
+        "enterConfirmPw": "Please enter a new password again!",
+        "pwNotSame": "Inconsistent password!",
+        "newPassword": "new password",
+        "confirmPassword": "Confirm new password"
+    }
+}

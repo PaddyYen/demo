@@ -1,0 +1,31 @@
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background: #1ab394;
+  } 
+
+
+.mat-column-number {
+    max-width: 80px;
+    justify-content:left;
+}
+
+.mat-column-name {
+  max-width: 400px;
+  justify-content:center;
+  word-break:break-all; 
+  word-wrap:break-all;
+}
+
+.mat-column-jobTitle {
+  max-width: 150px;
+  justify-content:center;
+}
+
+.mat-column-phone {
+  max-width: 150px;
+  justify-content:center;
+}
+
+.mat-column-email {
+  max-width: 400px;
+  justify-content:center;
+}

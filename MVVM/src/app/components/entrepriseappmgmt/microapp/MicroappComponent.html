@@ -1,0 +1,56 @@
+<div class="row  border-bottom white-bg dashboard-header">
+    <button class="btn btn-success" (click)="openModal(microApp, 1)"><i class="fa fa-plus">&nbsp;&nbsp;<span [translate]="'apps.addMain'"></span></i></button>
+</div>
+  
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="wrapper wrapper-content">
+        <div class="row">
+          <div class="ibox-content">
+              <mat-table #table [dataSource]="microAppsDataSource">
+                  <ng-container matColumnDef="number">
+                      <mat-header-cell *matHeaderCellDef [translate]="'public.number'"></mat-header-cell>
+                      <mat-cell *matCellDef="let row; let i = index">{{i + 1}}</mat-cell>
+                  </ng-container>
+                  <ng-container matColumnDef="name">
+                      <mat-header-cell *matHeaderCellDef [translate]="'apps.name'"></mat-header-cell>
+                      <mat-cell *matCellDef="let row">{{ row.name }}</mat-cell>
+                  </ng-container>
+                  <ng-container matColumnDef="url">
+                      <mat-header-cell *matHeaderCellDef [translate]="'apps.url'"></mat-header-cell>
+                      <mat-cell *matCellDef="let row">{{ row.url }}</mat-cell>
+                  </ng-container>
+                  <ng-container matColumnDef="editBtn">
+                      <mat-header-cell *matHeaderCellDef [translate]="'apps.edit'"></mat-header-cell>
+                      <mat-cell *matCellDef="let row; let i = index"><button class="btn btn-default" (click)="openModal(row, 2, i)"><i class="fa fa-cog">&nbsp;&nbsp;<span [translate]="'apps.edit'"></span></i></button></mat-cell>
+                    </ng-container>
+                  <ng-container matColumnDef="addSubBtn">
+                      <mat-header-cell *matHeaderCellDef [translate]="'apps.addSub'"></mat-header-cell>
+                      <mat-cell *matCellDef="let row; let i = index"><button class="btn btn-success" (click)="openSubTabModal(row, i)"><i class="fa fa-plus">&nbsp;&nbsp;<span [translate]="'apps.addSub'"></span></i></button></mat-cell>
+                  </ng-container>
+                  <ng-container matColumnDef="queuesBtn">
+                      <mat-header-cell *matHeaderCellDef [translate]="'apps.queues'"></mat-header-cell>
+                      <mat-cell *matCellDef="let row; let i = index">
+                          <a class="waves-effect waves-light btn-small" (click)="moveMainAppUp(i)">
+                              <i class="material-icons prefix" style="margin-top: -4px;">arrow_drop_up</i>
+                          </a>
+                          <a class="waves-effect waves-light btn-small" (click)="moveMainAppDown(i)">
+                              <i class="material-icons prefix" style="margin-top:28px; margin-left: -24px;">arrow_drop_down</i>
+                          </a>
+                      </mat-cell>
+                  </ng-container>
+                  <ng-container matColumnDef="deleteBtn">
+                      <mat-header-cell *matHeaderCellDef [translate]="'public.delete'"></mat-header-cell>
+                      <mat-cell *matCellDef="let row; let i = index"><button class="btn btn-danger" (click)="deleteTab(row, i)"><i class="fa fa-trash-o">&nbsp;&nbsp;<span [translate]="'public.delete'"></span></i></button></mat-cell>
+                  </ng-container>
+                  <mat-header-row *matHeaderRowDef=displayedColumns></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="getMicroApp(row)" [ngStyle]="{'background-color': selectedRowIndex == row.id ? '#F0F0F0' : ''}"></mat-row>
+              </mat-table>
+              <mat-paginator [length]="resultsLength" [pageSize]="pageSize" (page)="onPageChanged($event)">
+              </mat-paginator>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
