@@ -1,0 +1,27 @@
+.input-full-width {
+      width:340px;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 200;
+  }
+  
+  .mat-focused .mat-form-field-label {
+      font-family: '微軟正黑體';
+  } 
+  
+  .hr-line-dashed {
+      border-top: 1px dashed #e7eaec;
+      color: #ffffff;
+      background-color: #ffffff;
+      height: 1px;
+      margin: 20px 0;
+  }
+  
+  .hr-line-foot-dashed {
+      border-top: 1px dashed #e7eaec;
+      color: #ffffff;
+      background-color: #ffffff;
+      height: 1px;
+      margin: 10px 0;
+  }
+  

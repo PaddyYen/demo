@@ -1,0 +1,83 @@
+{
+    "toast": {
+        "importDepartment": "請先選擇一個部門!",
+        "deleteTab": "已有子選單，不可刪除。",
+        "inputQuartzParameter": "請輸入同步頻率之參數",
+        "deleteSuccess": "刪除成功!",
+        "addSuccess": "新增成功",
+        "updateSuccess": "修改成功",
+        "inputDataError": "請輸入正確的資料"
+    },
+    "public": {
+        "number": "編號",
+        "delete": "刪除",
+        "add": "新增",
+        "update": "修改",
+        "close": "關閉",
+        "store": "儲存",
+        "success": "建立成功!"
+    },
+    "tabs": {
+        "access": {
+            "title":"權限管理",
+            "org":"組織管理",
+            "account":"帳號管理",
+            "group":"群組管理"
+        },
+        "apps":{
+            "title":"企業應用",
+            "appList":"應用列表"
+        },
+        "message":{
+            "title":"訊息管理",
+            "robot":"自訂指令"
+        },
+        "entsetting":{
+            "title":"企業設定",
+            "afsetting":"Agentflow 設定"
+        }
+    },
+    "apps": {
+        "lists": "主應用列表",
+        "name": "名稱",
+        "url": "網址",
+        "edit": "編輯",
+        "addSub": "新增子應用",
+        "queues": "順序",
+        "addMain": "新增主應用",
+        "updateMain": "修改主應用",
+        "type": "應用類型"
+    },
+    "organization": {
+        "tree": "組織樹",
+        "people": "人員",
+        "name": "姓名",
+        "phone": "手機",
+        "jobTitle": "職務",
+        "email": "信箱",
+        "import": "匯入",
+        "change": "組織異動",
+        "Synchronize": "組織同步",
+        "now": "立即同步",
+        "SynchronizeFrequency": "設定同步頻率",
+        "setting":"設定",
+        "parameter":"參數"
+    },
+    "room": {
+        "create": "建立聊天室"
+    },
+    "access": {
+        "name": "姓名",
+        "matrixaccount": "matrix 帳號",
+        "changePassword": "變更密碼",
+        "disabled": "停用帳號",
+        "disabledAccountSuccess": "停用帳號成功",
+        "passwordChangeSuccess": "密碼變更成功",
+        "passwordNotSame": "密碼須相同",
+        "enterPw": "請輸入新密碼!",
+        "enterConfirmPw": "請輸入確認新密碼!",
+        "pwNotSame": "密碼不一致!",
+        "newPassword": "新密碼",
+        "confirmPassword": "確認新密碼"
+    }
+}
